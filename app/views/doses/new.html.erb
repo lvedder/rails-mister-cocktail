@@ -1,9 +1,12 @@
 <div class="formular">
   <h1 class="text-center">Add description</h1>
-  <%= simple_form_for [@dose] do |f| %>
+  <%= simple_form_for @dose do |f| %>
+    <div class="form-group">
+    <%= f.association :cocktail, class: "form-control" %>
+    </div>
     <div class="form-group">
     <%= f.input :description, class: "form-control" %>
     </div>
     <%= f.submit "Add cocktail description", class: "btn btn-primary " %>
-  <% end %>
 </div>
+<% end %>

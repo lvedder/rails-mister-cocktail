@@ -1,12 +1,21 @@
 <div>
-  <h1><%= @cocktail.name %></h1>
+  <h1><%= @cocktail.name.capitalize %></h1>
 </div>
 
 <div>
 <i class="fas fa-undo"></i> <%= link_to "Back to list", cocktails_path %>
 <br>
 <br>
-<i class="fas fa-edit"></i> <%= link_to "Add description", new_doses_path(@cocktail) %>
+<i class="fas fa-edit"></i> <%= link_to "Add description",new_doses_path(@cocktail, @dose) %>
 </div>
 <br>
 
+
+<div class="collection-items">
+  <h3>Description</h3>
+  <ul>
+    <% @doses.each do |dose| %>
+    <li class="collection-item"><div class="description"><%= dose.description %></div></li>
+    <% end %>
+  </ul>
+</div>

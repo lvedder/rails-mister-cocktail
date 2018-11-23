@@ -1,13 +1,15 @@
-<div class="flex-container">
+<div class="container">
+<h1 class="text-center">Cocktails</h1>
+  <div class="card-container">
   <div class="row">
-    <h1 class= "text-center">Find a cocktail</h1>
-    <% @cocktails.each do |cocktail| %>
-    <div class="card col-xs-6 col-sm-4">
-      <h3 class="card-title"><strong><%= cocktail.name %></strong></h3>
-       <div class="cocktails-link">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card col-xs-6">
+      <h3 class="card-title"><strong><%= cocktail.name.capitalize %></strong></h3>
+      <div class="cocktails-link">
        <%= link_to "Details", cocktail_path(cocktail), style: "font-size: 12px;" %>
-       </div>
+      </div>
     </div>
     <% end %>
   </div>
+</div>
 </div>
