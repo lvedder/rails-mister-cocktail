@@ -1,0 +1,12 @@
+<div>
+  <h1><%= @cocktail.name %></h1>
+</div>
+
+<div>
+<i class="fas fa-undo"></i> <%= link_to "Back to list", cocktails_path %>
+<br>
+<br>
+<i class="fas fa-edit"></i> <%= link_to "Add description", new_doses_path(@cocktail) %>
+</div>
+<br>
+
